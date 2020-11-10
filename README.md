@@ -42,8 +42,12 @@ On visualizing the data by class using the Azure ML feature importance service, 
 
 
 Therefore, there are numerous performance improvement strategies that can be explored. They are:
+
     •	 A better metric such as AUC metric or the F1 metric can be optimized because they are insensitive to class imbalance. This applies to both the Scikit-Learn pipeline           and AutoML. 
+    
     •	Class balancing techniques such as up-sampling the smaller class, ‘no’, or down-sampling the larger class, ‘yes’; these methods can help to prevent the Scikit-Learn            Logistic Regression Model from overfitting. 
+    
     •	For the Scikit-Learn Logistic Regression Model, the kernel selection can be optimized for the given data. 
+    
     •	For the AutoML, the cross-validation hyperparameter can be experimented to find the best cross-validation fold for the given data.
 
