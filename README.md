@@ -23,7 +23,7 @@ T=  Metric/((1+S) )                           where T is the termination thresho
 A run terminates when metric < T.
 
 
-## AutoML
+## AutoML Pipeline
 An AutoML is built on the Bank Marketing dataset to automatically train and tune machine learning algorithms at various hyperparameter tuning and feature selection for an optimal selection of a model that best fits the training dataset using a given target metric. The pipeline is diagrammatically provided below.
 
 ![]
