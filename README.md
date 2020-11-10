@@ -21,6 +21,7 @@ Considering that the HyperDrive requires a search space for tuning the hyperpara
 Further, the Random search space supports early termination of low-performing models. To apply the early stopping policy, this project adopted the “Bandit Termination Policy” to ensure that the Azure ML pipeline does not waste time exploring runs with hyperparameters that are not promising. The policy is expressed as:
 
 T=  Metric/((1+S) )                           where T is the termination threshold,S,the slack-factor. 
+
 A run terminates when metric < T.
 
 
