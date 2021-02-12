@@ -1,5 +1,14 @@
 # Optimizing an ML Pipeline in Azure
 
+# Table of Contents
+1. [Overview]()
+2. [Summary]()
+3. [The Azure ML Pipelines]()
+    - [Scikit-learn Pipeline]()
+    - [AutoML Pipeline]()
+4. [Pipeline Comparison]()
+5. [Future Work]()
+
 ## Overview
 This project is part of the Udacity Azure ML Nanodegree.
 In this project, we build and optimize an Azure ML pipeline using the Python SDK and a provided Scikit-learn model.
@@ -10,9 +19,9 @@ The data for use in this project is the UCI Bank Marketing dataset on client res
 
 For this classification task of predicting, ‘yes’ or ‘no’, the Voting Ensemble model from the AutoML pipeline emerged as the best forming model by a 91.68% accuracy. 
 
-# The Azure ML Pipelines
+## The Azure ML Pipelines
 
-## Scikit-learn Pipeline
+### Scikit-learn Pipeline
 In this project, the Azure ML SDK services is employed to train a standard Scikit-learn Logistic Regression model on the Bank Marketing ‘tabular’ dataset on a single-node CPU through employing the capabilities of the Azure ML HyperDrive for optimizing the hyperparameters. The pipeline is illustrated below.
 
 ![](project-images/Scikit-learn%20pipeline.png)
@@ -25,14 +34,14 @@ T=  Metric/((1+S) )                           where T is the termination thresho
 A run terminates when metric < T.
 
 
-## AutoML Pipeline
+### AutoML Pipeline
 An AutoML is built on the Bank Marketing dataset to automatically train and tune machine learning algorithms at various hyperparameter tuning and feature selection for an optimal selection of a model that best fits the training dataset using a given target metric. The pipeline is diagrammatically provided below.
 
 ![](project-images/AutoML%20pipeline.png)
 
 ![](project-images/AutoML%20parameters.png)
 
-## Pipeline comparison
+## Pipeline Comparison
 From the experimental results of the Azure Machine Learning pipelines (Scikit-Learn and AutoML): the AutoML pipeline is observed to produce the best performing model, Voting Ensemble, which showed to be a better fit to the data by its 91.68% accuracy. Though, the accuracy achieved with Voting Ensemble is a marginal difference of 0.67% compared to the 91.01% accuracy achieved with Scikit-Learn hyperparameter tuned Logistic Regression model, the performance difference can be attributed to the weighting mechanism that AutoML automatically applies to imbalanced data. The Scikit-Learn Logistic Regression model without hyperparameter tuning is by far the lowest performing model by its 90.97% accuracy achieved with values of 1 and 100, that is, Regularization strength, C, and Maximum Iteration, max-iter, parameters, respectively. 
 
 ## Future work
@@ -43,11 +52,11 @@ On visualizing the data by class using the Azure ML feature importance service, 
 
 Therefore, there are numerous performance improvement strategies that can be explored. They are:
 
-    •	 A better metric such as AUC metric or the F1 metric can be optimized because they are insensitive to class imbalance. This applies to both the Scikit-Learn pipeline           and AutoML. 
+- A better metric such as AUC metric or the F1 metric can be optimized because they are insensitive to class imbalance. This applies to both the Scikit-Learn pipeline           and AutoML. 
     
-    •	Class balancing techniques such as up-sampling the smaller class, ‘no’, or down-sampling the larger class, ‘yes’; these methods can help to prevent the Scikit-Learn            Logistic Regression Model from overfitting. 
+- Class balancing techniques such as up-sampling the smaller class, ‘no’, or down-sampling the larger class, ‘yes’; these methods can help to prevent the Scikit-Learn            Logistic Regression Model from overfitting. 
     
-    •	For the Scikit-Learn Logistic Regression Model, the kernel selection can be optimized for the given data. 
+- For the Scikit-Learn Logistic Regression Model, the kernel selection can be optimized for the given data. 
     
-    •	For the AutoML, the cross-validation hyperparameter can be experimented to find the best cross-validation fold for the given data.
+- For the AutoML, the cross-validation hyperparameter can be experimented to find the best cross-validation fold for the given data.
 
