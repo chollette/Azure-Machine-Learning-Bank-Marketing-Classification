@@ -15,7 +15,7 @@ In this project, we build and optimize an Azure ML pipeline using the Python SDK
 This model is then compared to an Azure AutoML run.
 
 ## Summary
-The data for use in this project is the UCI Bank Marketing dataset on client responses acquired through a direct call marketing campaign by a Portuguese banking Institution with the aim to access whether a client would subscribe for the bank term deposit given as a ‘yes’, or a ‘no’. Therefore, the problem suggests a binary classification problem where the goal is to predict if the client will subscribe a term deposit. The data can be found here: https://archive.ics.uci.edu/ml/datasets/Bank+Marketing
+The data for use in this project is the UCI Bank Marketing dataset on client responses acquired through a direct call marketing campaign by a Portuguese banking Institution with the aim to access whether a client would subscribe for the bank term deposit given as a ‘yes’, or a ‘no’. Therefore, the problem suggests a binary classification problem where the goal is to predict if the client will subscribe a term deposit. The data can be found [here](https://archive.ics.uci.edu/ml/datasets/Bank+Marketing)
 
 For this classification task of predicting, ‘yes’ or ‘no’, the Voting Ensemble model from the AutoML pipeline emerged as the best forming model by a 91.68% accuracy. 
 
